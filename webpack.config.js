@@ -36,9 +36,13 @@ var config = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    root: [path.join(__dirname, "lib")]
+    root: [path.join(__dirname, "bower_components")]
   },
-  plugins: []
+  plugins: [
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
+  ]
 };
 
 // production "build" options

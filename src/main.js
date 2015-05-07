@@ -10,11 +10,6 @@ React.render(React.createElement(App), document.body);
 // register objects into window for debugging
 if (DEBUG) {
   global.React = React;
-  global.Dispatcher = require('./dispatcher');
-  global.TodoClient = require('./clients/todo');
-  global.TodoStore = require('./stores/todo');
-  var {TodoActionCreators} = require('./actions');
-  global.TodoActionCreators = TodoActionCreators;
 }
 
 
