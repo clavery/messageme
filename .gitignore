@@ -5,3 +5,4 @@ aws-config.json
 #prod builds
 app.js
 app.js.map
+bower_components/
